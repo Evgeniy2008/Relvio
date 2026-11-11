@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import Button from "./Button/Button";
 
 export default function Header() {
     return (
@@ -11,8 +14,8 @@ export default function Header() {
                 <li><Link href="/faq">FAQ</Link></li>
             </ul>
             <div className="flex gap-5">
-                <button className="w-[120px] h-[50px] cursor-pointer font-bold border-2 rounded-2xl border-[#cdcdcd]">Log in</button>
-                <button className="w-[150px] h-[50px] text-white cursor-pointer font-bold border-2 bg-[#506aea] rounded-2xl">Start free</button>
+                <Button buttonType="white" text="Log in" func={() => alert("hello")} />
+                <Button buttonType="blue" text="Start free" func={() => alert("hello")} />
             </div>
         </header>
     );
